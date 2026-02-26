@@ -74,7 +74,7 @@ function itemTemplate (item) {
                 src="${item.preview}"
                 data-source="${item.original}"
                 alt="${item.description}"
-                width = "360";
+                width="360"
                 />
             </a>
         </li>
@@ -88,9 +88,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
     const markup = itemsTemplate(images);
     ulElem.innerHTML = markup;
 
-})
-
-ulElem.addEventListener('click', (e)=>{
+    ulElem.addEventListener('click', (e)=>{
      e.preventDefault(); 
     if (e.target.nodeName !== 'IMG') {
             return;
@@ -98,10 +96,13 @@ ulElem.addEventListener('click', (e)=>{
     showModal(e.target.dataset.source)
 }
 )
+
+})
+
+
 function showModal(imageUrl){
     const instance = basicLightbox.create(`
         <img width="800" src="${imageUrl}"/>
         `);
          instance.show();
-
 }
