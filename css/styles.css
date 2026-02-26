@@ -1,6 +1,9 @@
+body {
+    margin:0;
+}
 .gallery {
   list-style: none;
-  padding: 0;
+  padding: 24px;
   margin: 0;
 
   display: flex;
@@ -26,7 +29,7 @@
 }
 
 .gallery-image:hover {
- transform: scale(1.1);
+ transform: scale(1.044);
 }
 .sl-overlay {
   background-color: rgba(46, 47, 66, 0.8);
